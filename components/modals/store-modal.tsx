@@ -19,6 +19,7 @@ import {
     FormMessage
 } from "@/components/ui/form";
 import { useStoreModal } from "@/hooks/use-store-modal";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
     name: z.string().min(1)
@@ -26,6 +27,7 @@ const formSchema = z.object({
 
 export const StoreModal = () => {
     const storeModal = useStoreModal();
+    const router = useRouter();
 
     const [loading, setLoading] = useState(false);
 
@@ -42,7 +44,10 @@ export const StoreModal = () => {
 
             const response = await axios.post('/api/stores', values)
 
+            storeModal.onClose();
             toast.success('Store Created.')
+            router.push(`/${response.data.id}`);
+            
         }catch(error){
             toast.error('Something went wrong.')
         }
@@ -77,7 +82,7 @@ export const StoreModal = () => {
                                 )}
                             />
                             <div className="pt-6 space-x-3 flex items-center justify-end w-full">
-                                <Button disabled={loading} variant="outline" onClick={storeModal.onClose}>Cancel</Button>
+                                <Button disabled={loading} type="button" variant="outline" onClick={storeModal.onClose}>Cancel</Button>
                                 <Button disabled={loading} type="submit">Continue</Button>
                             </div>
                         </form>

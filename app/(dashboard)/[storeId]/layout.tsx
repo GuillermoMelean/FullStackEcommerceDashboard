@@ -3,6 +3,7 @@ import { auth } from "@clerk/nextjs"
 
 import prismadb from "@/lib/prismadb";
 import Navbar from "@/components/navbar";
+import { useStoreModal } from '@/hooks/use-store-modal';
 
 export default async function DashboardLayout({
     children,
