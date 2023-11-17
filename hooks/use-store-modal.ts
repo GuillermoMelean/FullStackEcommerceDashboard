@@ -1,3 +1,5 @@
+// This hook is created to acess the create store modal in any where
+
 import {create} from 'zustand'
 
 interface useStoreModalStore {
