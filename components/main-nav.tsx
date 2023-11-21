@@ -18,19 +18,19 @@ export function MainNav({
             href: `/${params.storeId}`,
             label: 'Overview',
             active: pathname == `/${params.storeId}`,
-            icon: <BookOpen  className="mr-2 h-4 w-4"/>
+            icon: <BookOpen className="mr-2 h-4 w-4" />
         },
         {
             href: `/${params.storeId}/billboards`,
             label: 'Billboards',
-            active: pathname == `/${params.storeId}/billboard`,
-            icon: <BarChart2  className="mr-2 h-4 w-4"/>
+            active: pathname == `/${params.storeId}/billboards`,
+            icon: <BarChart2 className="mr-2 h-4 w-4" />
         },
         {
             href: `/${params.storeId}/settings`,
             label: 'Settings',
             active: pathname == `/${params.storeId}/settings`,
-            icon: <Cog  className="mr-2 h-4 w-4"/>
+            icon: <Cog className="mr-2 h-4 w-4" />
         }
     ];
 

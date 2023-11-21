@@ -3,9 +3,9 @@ import { redirect } from "next/navigation";
 
 import prismadb from "@/lib/prismadb";
 
-export const revalidate = 0; 
+export const revalidate = 0;
 
-import {SettingsForm} from "./components/settings-form";
+import { SettingsForm } from "./components/settings-form";
 
 interface SettingsPageProps {
     params: {

@@ -80,3 +80,9 @@ If the request already included Authorization credentials, then the 401 response
 <b>403 Forbidden:</b>
 
 The server understood the request, but is refusing to fulfill it.
+
+### Special CSS classes
+
+#### sr-only
+
+The class is used to hide information intended only for screen readers from the layout of the rendered page.
