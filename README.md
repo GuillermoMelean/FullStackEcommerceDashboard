@@ -34,3 +34,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Helps
+
+## Prismadb
+
+### How to generate new models
+
+```
+npx prisma generate
+```
+
+### How to push changes
+
+```
+npx prisma db push
+```
+
+## Vocabulary
+
+### Self Closing Tag
+
+A traditional HTML tag such as `<p>`, `<div>`, `<section>`, etc., had an opening tag and a closing tag. However, due to their fundamental structure, void components in HTML, such as images and links, do not technically require closing tags. Images and links cannot have content - they are pointers to an element installed on the website.
+Instead of including independent opening and closing tags in more modern HTML variants such as XHTML, developers employ a self-closing tag that includes a "/" within the carets (\<>). For example – `<img src="image/circle" alt="example" />`
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Self-closing tags</title>
+</head>
+ <body>
+	<img src="https://cdn.pixabay.com/photo/2021/09/15/11/44/insect-6626635__340.jpg" alt="insect-bee"/>
+  </body>
+</html>
+
+```
+
+### Unauthorized vs Unauthenticated
+
+<b>401 Unauthorized:</b>
+
+If the request already included Authorization credentials, then the 401 response indicates that authorization has been refused for those credentials.
+
+<b>403 Forbidden:</b>
+
+The server understood the request, but is refusing to fulfill it.
