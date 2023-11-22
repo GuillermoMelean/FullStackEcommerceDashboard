@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { BarChart2, BookOpen, Cog } from "lucide-react";
+import { BarChart2, BookOpen, Cog, LibraryIcon } from "lucide-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
@@ -23,8 +23,14 @@ export function MainNav({
         {
             href: `/${params.storeId}/billboards`,
             label: 'Billboards',
-            active: pathname == `/${params.storeId}/billboards`,
+            active: pathname.includes(`/${params.storeId}/billboards`),
             icon: <BarChart2 className="mr-2 h-4 w-4" />
+        },
+        {
+            href: `/${params.storeId}/categories`,
+            label: 'Categories',
+            active: pathname.includes(`/${params.storeId}/categories`),
+            icon: <LibraryIcon className="mr-2 h-4 w-4" />
         },
         {
             href: `/${params.storeId}/settings`,
