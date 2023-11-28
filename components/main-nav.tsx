@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { BarChart2, BookOpen, Cog, LibraryIcon, RulerIcon } from "lucide-react";
+import { BarChart2, BookOpen, Cog, LibraryIcon, Palette, RulerIcon } from "lucide-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
@@ -37,6 +37,12 @@ export function MainNav({
             label: 'Sizes',
             active: pathname.includes(`/${params.storeId}/sizes`),
             icon: <RulerIcon className="mr-2 h-4 w-4" />
+        },
+        {
+            href: `/${params.storeId}/colors`,
+            label: 'Colors',
+            active: pathname.includes(`/${params.storeId}/colors`),
+            icon: <Palette className="mr-2 h-4 w-4" />
         },
         {
             href: `/${params.storeId}/settings`,
