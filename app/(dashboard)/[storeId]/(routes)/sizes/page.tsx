@@ -3,7 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { SizesClient } from "./components/client";
 import { SizeColumn } from "./components/columns";
 
-import { formatDate } from "@/utils/utils";
+import { dateFormatter } from "@/lib/utils";
 
 const SizesPage = async ({
   params
@@ -27,7 +27,7 @@ const SizesPage = async ({
     id: item.id,
     name: item.name,
     value: item.value,
-    createdAt: formatDate(item.createdAt) as string
+    createdAt: dateFormatter.format(item.createdAt) as string
   }))
 
   return (

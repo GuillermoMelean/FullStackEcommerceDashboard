@@ -3,7 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { CategoriesClient } from "./components/client";
 import { CategoryColumn } from "./components/columns";
 
-import { formatDate } from "@/utils/utils";
+import { dateFormatter } from "@/lib/utils";
 
 const CategoriesPage = async ({
   params
@@ -31,7 +31,7 @@ const CategoriesPage = async ({
     id: item.id,
     name: item.name,
     billboardLabel: item.billboard.label,
-    createdAt: formatDate(item.createdAt) as string
+    createdAt: dateFormatter.format(item.createdAt) as string
   }))
 
   return (
