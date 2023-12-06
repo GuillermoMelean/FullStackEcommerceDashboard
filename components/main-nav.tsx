@@ -51,6 +51,12 @@ export function MainNav({
             icon: <LayoutList className="mr-2 h-4 w-4" />
         },
         {
+            href: `/${params.storeId}/orders`,
+            label: 'Orders',
+            active: pathname.includes(`/${params.storeId}/orders`),
+            icon: <LayoutList className="mr-2 h-4 w-4" />
+        },
+        {
             href: `/${params.storeId}/settings`,
             label: 'Settings',
             active: pathname == `/${params.storeId}/settings`,
